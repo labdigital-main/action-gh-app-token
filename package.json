@@ -1,0 +1,25 @@
+{
+  "name": "action-get-app-token",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsup",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/labdigital-pluripharm/action-get-app-token"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@octokit/auth-app": "^4.0.7",
+    "@octokit/rest": "^19.0.5",
+    "@octokit/types": "^9.0.0",
+    "tsup": "^6.7.0",
+    "typescript": "^5.0.4"
+  }
+}

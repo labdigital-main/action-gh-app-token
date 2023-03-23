@@ -1,0 +1,19 @@
+---
+name: Generate GitHub App Token
+description: enables getting GH App token with GH Actions workflow
+inputs:
+  app-id:
+    description: App ID 
+    required: true
+  private-key:
+    description: App private key
+    required: true
+  installation-id:
+    description: App installation id
+    required: true
+outputs:
+  app-token:
+    description: obtained gh app token
+runs:
+  using: node16
+  main: action/index.js
