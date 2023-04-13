@@ -16,7 +16,7 @@ In order for this to work you need to:
     # Obtain App Installation Token
     - name: Get-App-Token
       id: get-app-token
-      uses: danone/mag.custom-action.get-app-token@main
+      uses: labdigital-main/action-gh-app-token
       with:
         app-id: ${{ secrets.<SECRET_NAME> }}
         private-key: ${{ secrets.<SECRET_NAME> }}
