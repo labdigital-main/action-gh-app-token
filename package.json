@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsup",
+    "build": "esbuild index.ts --bundle --platform=node --outfile=action/index.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -17,9 +17,11 @@
   "dependencies": {
     "@actions/core": "^1.10.0",
     "@octokit/auth-app": "^4.0.7",
-    "@octokit/rest": "^19.0.5",
+    "@octokit/rest": "^19.0.5"
+  },
+  "devDependencies": {
     "@octokit/types": "^9.0.0",
-    "tsup": "^6.7.0",
+    "esbuild": "^0.17.16",
     "typescript": "^5.0.4"
   }
 }
