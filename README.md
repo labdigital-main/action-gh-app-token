@@ -4,11 +4,11 @@ This action enables you to get Authentication Token from your GitHub App Install
 
 In order for this to work you need to: 
 1. Add all the needed repositories to the GitHub App Installation
-2. Add Organizational Secrets: 
-   - app-id
+2. Add repository secrets:
    - private-key
+3. Add repository variables:
+   - app-id
    - installation-id
-3. Add the repository that will be using this action to the scope of above organizational secrets
 4. Add following step to your GH Actions workflow:
   ```
   steps:
@@ -18,9 +18,9 @@ In order for this to work you need to:
       id: get-app-token
       uses: labdigital-main/action-gh-app-token
       with:
-        app-id: ${{ secrets.<SECRET_NAME> }}
-        private-key: ${{ secrets.<SECRET_NAME> }}
-        installation-id: ${{ secrets.<SECRET_NAME> }}
+        app-id: ${{ vars.APP_ID }}
+        private-key: ${{ secrets.APP_PRIVATE_KEY }}
+        installation-id: ${{ vars.APP_INSTALLATION_ID }}
         
     # Next Step in which you use the token
     - name: Use-App-Token
