@@ -16,7 +16,7 @@ In order for this to work you need to:
     # Obtain App Installation Token
     - name: Get-App-Token
       id: get-app-token
-      uses: labdigital-main/action-gh-app-token
+      uses: labdigital-main/action-gh-app-token@main
       with:
         app-id: ${{ vars.APP_ID }}
         private-key: ${{ secrets.APP_PRIVATE_KEY }}
